@@ -1,8 +1,28 @@
 @import "ember-bootstrap/bootstrap";
 @import "main";
+@import "nav-bar";
+@import "utilities/colors";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
-body, .h-screen {
+body,
+.h-screen {
   height: 100vh;
+  font-family: "Roboto Mono", monospace;
+}
+
+.btn {
+  border-radius: 0;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: $blue;
+  border-color: $blue;
+  text-transform: uppercase;
 }
 
 .login-form__error {
